@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid #f40612;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0, 8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.styleTop,
+.styleBottom {
+  color: #ffff;
+}
+
+.styleTop:hover,
+.styleBottom:hover {
+  color: #f40612;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100;
+  height: 0%;
+  background: #f40612;
+  z-index: -1;
+  transform: 0.8s;
+}
+
+.styleTop::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.styleBottom::before {
+  bottom: 0;
+  border-radius: 0 0 50% 50% 0 0;
+}
+
+.styleTop::before,
+.styleBottom::before {
+  height: 180%;
+}
+
+.styleTop:hover::before,
+.styleBottom:hover::before {
+  height: 0%;
+}
